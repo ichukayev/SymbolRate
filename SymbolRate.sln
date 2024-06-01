@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolRate", "ConsoleApp5\SymbolRate.csproj", "{14D07674-E9A9-4098-ADBD-1AF3E896AE4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolRateTest", "TestProject1\SymbolRateTest.csproj", "{94BF2A14-5838-486A-9326-5CD2EC3B7D99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14D07674-E9A9-4098-ADBD-1AF3E896AE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D07674-E9A9-4098-ADBD-1AF3E896AE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D07674-E9A9-4098-ADBD-1AF3E896AE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D07674-E9A9-4098-ADBD-1AF3E896AE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94BF2A14-5838-486A-9326-5CD2EC3B7D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94BF2A14-5838-486A-9326-5CD2EC3B7D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94BF2A14-5838-486A-9326-5CD2EC3B7D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94BF2A14-5838-486A-9326-5CD2EC3B7D99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D16B482-6EEB-48DE-8EDD-DDD95ECD08F4}
+	EndGlobalSection
+EndGlobal
