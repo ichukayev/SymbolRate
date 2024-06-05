@@ -52,6 +52,8 @@ namespace TestProject1
             var storage = new RatesStorageConcurrent();
             var symbols = new[] { "EURUSD", "USDJPY", "GBPUSD" };
 
+            var rnd = new Random();
+
             // Запускаем задачи для обновления и чтения котировок
             var tasks = new List<Task>();
 
@@ -59,26 +61,32 @@ namespace TestProject1
             {
                 tasks.Add(Task.Run(() =>
                 {
-                    for (int i = 0; i < 10000; i++)
+                    for (int i = 0; i < 100000000; i++)
                     {
+                        var rndNumber = rnd.Next(10, 10000);
+
                         storage.UpdateRate(new NativeRate
                         {
                             Time = DateTime.UtcNow,
                             Symbol = symbol,
-                            Bid = i,
-                            Ask = i + 0.1
+                            Bid = rndNumber,
+                            Ask = rndNumber + 0.5
                         });
                     }
                 }));
 
                 tasks.Add(Task.Run(() =>
                 {
-                    for (int i = 0; i < 10000; i++)
+                    for (int i = 0; i < 100000000; i++)
                     {
                         var rate = storage.GetRate(symbol);
                         if (rate != null)
                         {
-                            Assert.True(rate.Bid <= rate.Ask);
+                            if (rate.Bid > rate.Ask)
+                            {
+                                Assert.Fail($"Incorrect rate: Bid > Ask; Ask ={rate.Ask}, Bid ={rate.Bid}");
+
+                            }
                         }
                     }
                 }));

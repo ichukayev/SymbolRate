@@ -27,9 +27,15 @@ namespace ConsoleApp5
                 }
 
                 var oldRate = rates[newRate.Symbol];
-                oldRate.Time = newRate.Time;
-                oldRate.Bid = newRate.Bid;
-                oldRate.Ask = newRate.Ask;
+
+                //указываем текущую ссылку уже на новый объект
+                oldRate = new Rate
+                {
+                    Time = newRate.Time,
+                    Symbol = newRate.Symbol,
+                    Bid = newRate.Bid,
+                    Ask = newRate.Ask
+                };
             }
         }
         /// <summary>
@@ -45,11 +51,6 @@ namespace ConsoleApp5
                     return null;
 
                 var rate = rates[symbol];
-
-                //if (rate.Ask < rate.Bid)
-                //{
-                //    throw new Exception($"Incorrect rate: Ask < Bid; Ask={rate.Ask}, Bid={rate.Bid}");
-                //}
 
                 return rate;
             }     

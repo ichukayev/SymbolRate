@@ -38,12 +38,6 @@ namespace ConsoleApp5
         public Rate? GetRate(string symbol)
         {
             rates.TryGetValue(symbol, out var rate);
-
-            //if (rate.Ask < rate.Bid)
-            //{
-            //    throw new Exception($"Incorrect rate: Ask < Bid; Ask={rate.Ask}, Bid={rate.Bid}");
-            //}
-
             return rate;
         }
 
